@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="color:red"> Etes vous sûr de vouloir supprimer le post {{titre}}?</h1>
+<form method="post" action="" enctype="multipart/form-data">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Supprimer</button>
+    <button class="btn btn-primary"><a class="text-white" href="">Abandonner</a></button>
+{% endblock %}
